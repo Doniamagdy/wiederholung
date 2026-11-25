@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch lernen – Verben & Familie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <h1>Deutsch lernen 🇩🇪</h1>
+  <nav id="nav">
+    <a href="#w-fragen">🙋 W-Fragen</a>
+    <a href="#regelmaessig">✏️ Regelmäßige Verben</a>
+    <a href="#haben-sein">🔁 haben &amp; sein</a>
+    <a href="#ja-nein">❓ Ja/Nein-Fragen</a>
+    <a href="#familie">👨‍👩‍👧‍👦 Familie</a>
+  </nav>
+  <p class="hint">🔊 Klick auf ein Wort, einen Satz oder eine Zeile – du hörst die Aussprache.</p>
+</header>
+
+<main>
+  <section id="w-fragen">
+    <h2>W-Fragen 🙋</h2>
+    <p class="lead">W-Fragen fangen mit einem <b>W-Wort</b> an. Danach kommt sofort das <b>Verb</b>: W-Wort (1) + Verb (2).</p>
+    <div class="cards" id="wCards"></div>
+    <div class="stage col">
+      <div class="bigemoji" id="wEmoji"></div>
+      <p class="bigq say" id="wQuestion"></p>
+      <div class="row"><button class="btn" id="wBtn">💬 Antwort zeigen</button></div>
+      <p class="answer say" id="wAnswer"></p>
+    </div>
+    <div class="box">
+      <h3>Die Reihenfolge</h3>
+      <p class="say" data-say="Wo wohnst du?"><span class="w">Wo</span> <span class="end">wohnst</span> du?</p>
+      <p><span class="w">W-Wort</span> + <span class="end">Verb</span> + Person</p>
+      <p>Bei <b>Warum</b> beginnt die Antwort mit <b>Weil</b>. Das Verb steht dann am Ende: <i>Weil ich Deutsch mag.</i></p>
+    </div>
+    <a class="next" href="#regelmaessig">Weiter: Regelmäßige Verben ➜</a>
+  </section>
+
+  <section id="regelmaessig">
+    <h2>Regelmäßige Verben konjugieren ✏️</h2>
+    <p class="lead">Wähle ein Verb. Klick auf eine Zeile zum Hören.</p>
+    <div class="cards" id="verbPicker"></div>
+    <div class="stage">
+      <div class="bigemoji" id="rvEmoji"></div>
+      <div>
+        <h3 id="rvTitle"></h3>
+        <table class="conj" id="rvTable"></table>
+        <button class="btn" id="rvAll">🔊 Alle anhören</button>
+      </div>
+    </div>
+    <div class="endings">
+      <h3>Die Endungen</h3>
+      <div id="endTable"></div>
+    </div>
+    <a class="next" href="#haben-sein">Weiter: haben &amp; sein ➜</a>
+  </section>
+
+  <section id="haben-sein">
+    <h2>haben und sein 🔁</h2>
+    <p class="lead">Diese zwei Verben sind unregelmäßig. Man muss sie lernen!</p>
+    <div class="two">
+      <div class="stage col"><div class="bigemoji">🎒</div><h3>haben</h3><table class="conj" id="haben"></table><button class="btn" data-all="haben">🔊 Alle anhören</button></div>
+      <div class="stage col"><div class="bigemoji">🙋</div><h3>sein</h3><table class="conj" id="sein"></table><button class="btn" data-all="sein">🔊 Alle anhören</button></div>
+    </div>
+    <div class="box">
+      <h3>Beispiele</h3>
+      <ul class="ex" id="hsEx"></ul>
+    </div>
+    <a class="next" href="#ja-nein">Weiter: Ja/Nein-Fragen ➜</a>
+  </section>
+
+  <section id="ja-nein">
+    <h2>Ja/Nein-Fragen ❓</h2>
+    <p class="lead">Bei einer Ja/Nein-Frage steht das <b>Verb auf Position 1</b>. Wähle eine Frage und antworte mit <b>Ja</b> oder <b>Nein</b>.</p>
+    <div class="cards" id="qPicker"></div>
+    <div class="stage col" id="qStage">
+      <p class="bigq say" id="qText"></p>
+      <div class="row">
+        <button class="btn yes" id="yesBtn">✅ Ja</button>
+        <button class="btn no" id="noBtn">❌ Nein</button>
+      </div>
+      <p class="answer say" id="qAnswer">Klick auf Ja oder Nein.</p>
+    </div>
+    <div class="box">
+      <h3>nicht oder kein?</h3>
+      <p><span class="nicht">nicht</span> verneint ein Verb, ein Adjektiv oder einen Ort: <i>Ich bin <span class="nicht">nicht</span> müde.</i></p>
+      <p><span class="nicht">kein</span> verneint ein Nomen mit ein-/eine: <i>Ich habe <span class="nicht">kein</span> Handy.</i></p>
+      <p>Bei <i>Ja</i> brauchst du weder nicht noch kein.</p>
+    </div>
+    <a class="next" href="#familie">Weiter: Familie ➜</a>
+  </section>
+
+  <section id="familie">
+    <h2>Die Familie 👨‍👩‍👧‍👦</h2>
+    <p class="lead">Klick auf eine Karte. Du hörst das Wort und einen Satz.</p>
+    <div class="cards fam" id="famCards"></div>
+    <p class="sentence say" id="famSentence">Wähle eine Karte.</p>
+    <a class="next" href="#w-fragen">Zurück zum Anfang ↺</a>
+  </section>
+</main>
+<footer>Viel Erfolg beim Lernen! 🌟</footer>
+<script src="script.js"></script>
+</body>
+</html>
